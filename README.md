@@ -297,11 +297,11 @@ Smart_Ai/
 
 > **Route Calculation View** — user clicks origin and destination on the Manhattan map; the optimal route polyline renders with a cost breakdown sidebar.
 >
-> *(Add a screenshot here after first run: `frontend/public/screenshots/route-view.png`)*
+> frontend/public/screenshots/route-view.png
 
 > **VRP Fleet View** — two vehicles shown in different colors completing their assigned delivery circuits from the depot.
 >
-> *(Add a screenshot here after first run: `frontend/public/screenshots/vrp-view.png`)*
+> frontend/public/screenshots/vrp-view.png
 
 ---
 
