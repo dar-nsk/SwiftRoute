@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0f0f1a;
+  color: #e2e8f0;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebar {
+  width: 380px;
+  min-width: 380px;
+  background: #1a1a2e;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #2d2d4e;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.map-container {
+  flex: 1;
+  position: relative;
+}
+
+/* Custom scrollbar */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #3d3d6b;
+  border-radius: 3px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+/* Leaflet overrides */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+}
+.leaflet-popup-content-wrapper {
+  background: #1e1e3f;
+  color: #e2e8f0;
+  border: 1px solid #3d3d6b;
+  border-radius: 8px;
+}
+.leaflet-popup-tip {
+  background: #1e1e3f;
+}
+.leaflet-popup-close-button {
+  color: #7c7ca0 !important;
+}
+
+/* Metric cards */
+.metric-card {
+  background: #16213e;
+  border: 1px solid #2d2d4e;
+  border-radius: 8px;
+  padding: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+/* Mode selector */
+.mode-option {
+  border: 1px solid #3d3d6b;
+  border-radius: 8px;
+  margin: 4px 0;
+  transition: all 0.2s;
+}
+.mode-option:hover {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+/* Loading pulse animation */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+.loading-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* VRP stop markers */
+.vrp-marker {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Attribution link in dark map */
+.leaflet-control-attribution {
+  background: rgba(15, 15, 26, 0.8) !important;
+  color: #7c7ca0 !important;
+}
+.leaflet-control-attribution a {
+  color: #6366f1 !important;
+}
